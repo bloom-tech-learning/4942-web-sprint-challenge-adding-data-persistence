@@ -1,7 +1,7 @@
 // build your `Project` model here
 const db = require('../../data/dbConfig')
 
-async function find() {
+async function find() {    
   
     const rows = await db('projects')
       .select('*')
