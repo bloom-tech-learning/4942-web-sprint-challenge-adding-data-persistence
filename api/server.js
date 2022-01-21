@@ -4,6 +4,7 @@ const helmet = require('helmet');
 const cors = require('cors')
 
 const ResourceRouter = require('./resource/router')
+const ProjectRouter = require('./project/router')
 
 const server = express();
 
@@ -12,6 +13,7 @@ server.use(helmet());
 server.use(cors()) // cors() returns a (req, res, nex) => { // stuff and then next() }
 
 server.use('/api', ResourceRouter)
+server.use('/api', ProjectRouter)
 
 server.use('/', (req, res)=>{
     res.send('Unit 4 Week 2 Sprint Challenge!')
