@@ -6,7 +6,7 @@
     "start": "node index.js",
     "server": "nodemon index.js",
     "migrate": "knex migrate:latest",
-    "rollback": "knex migrate:rollback",    
+    "rollback": "knex migrate:rollback",
     "seed": "knex seed:run",
     "resetdb": "npm run rollback && npm run migrate && npm run seed",
     "test": "cross-env NODE_ENV=testing jest --verbose --runInBand --silent"
@@ -20,6 +20,15 @@
     "cross-env": "7.0.3",
     "eslint": "8.4.1",
     "jest": "27.4.3",
+    "nodemon": "^2.0.15",
     "supertest": "6.1.6"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^14.2.0",
+    "express": "^4.17.2",
+    "helmet": "^5.0.1",
+    "knex": "^0.95.15",
+    "sqlite3": "^5.0.2"
   }
 }
